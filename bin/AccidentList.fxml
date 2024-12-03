@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="p2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="716.0" prefWidth="912.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AccidentListController">
+	<children>
+		<AnchorPane fx:id="p1" focusTraversable="true" layoutY="10.0" prefHeight="503.0" prefWidth="435.0" style="-fx-background-color: #eeeeee; -fx-background-radius: 50;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+			<children>
+				<Label fx:id="lab" graphicTextGap="10.0" layoutX="309.0" layoutY="14.0" prefHeight="54.0" prefWidth="329.0" text="Accident's Query" textAlignment="CENTER" AnchorPane.leftAnchor="309.0" AnchorPane.rightAnchor="254.33333333333326">
+					<font>
+						<Font name="Goudy Old Style Bold" size="45.0" />
+					</font>
+					<effect>
+						<ColorAdjust brightness="-1.0" contrast="1.0" hue="1.0" saturation="1.0" />
+					</effect>
+				</Label>
+				<Button fx:id="GoToAccidentpage" contentDisplay="RIGHT" layoutX="623.0" layoutY="542.0" mnemonicParsing="false" onAction="#goToAccident" prefHeight="25.0" prefWidth="203.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50; -fx-background-radius: 50;" text="Go To Accident page" textFill="WHITE" AnchorPane.leftAnchor="623.0" AnchorPane.topAnchor="542.0">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Text fx:id="la2" layoutX="47.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="insurance company">
+					<font>
+						<Font name="Goudy Old Style Bold" size="14.0" />
+					</font>
+				</Text>
+				<TableView fx:id="AccidentTable" layoutX="14.0" layoutY="77.0" prefHeight="348.0" prefWidth="869.0" style="-fx-border-radius: 50;" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="9.0">
+					<columns>
+						<TableColumn fx:id="AccidentID" prefWidth="250.66663646697998" text=" AccidentID" />
+						<TableColumn fx:id="Location" prefWidth="181.3333740234375" text=" Location" />
+						<TableColumn fx:id="AccidentDate" prefWidth="215.99993896484375" text=" AccidentDate" />
+						<TableColumn fx:id="ADescription" prefWidth="220.00004069010413" text="ADescription" />
+					</columns>
+					<cursor>
+						<Cursor fx:constant="OPEN_HAND" />
+					</cursor>
+				</TableView>
+				<Button fx:id="GoToHomePage" contentDisplay="RIGHT" layoutX="623.0" layoutY="482.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="25.0" prefWidth="203.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50; -fx-background-radius: 50;" text="Go To Home Page" textFill="WHITE">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Button fx:id="SortDESBYAccidentID" layoutX="68.0" layoutY="482.0" mnemonicParsing="false" onAction="#SortDESBYAccidentID" prefHeight="30.0" prefWidth="203.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50; -fx-background-radius: 50;" text="Sort DES BY  AccidentID" textFill="WHITE">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Button fx:id="SortDESBYLocation" layoutX="68.0" layoutY="542.0" mnemonicParsing="false" onAction="#SortDESBYLocation" prefHeight="30.0" prefWidth="203.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50; -fx-background-radius: 50;" text="Sort DES BY  Location" textFill="WHITE">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Button fx:id="SortASCBYAccidentDate" layoutX="68.0" layoutY="607.0" mnemonicParsing="false" onAction="#SortASCBYAccidentDate" prefHeight="30.0" prefWidth="203.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50; -fx-background-radius: 50;" text="Sort ASC BY  AccidentDate" textFill="WHITE">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Button fx:id="GoToendPage" contentDisplay="RIGHT" layoutX="624.0" layoutY="607.0" mnemonicParsing="false" onAction="#goToEnd" prefHeight="30.0" prefWidth="203.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50; -fx-background-radius: 50;" text="Go To end Page" textFill="WHITE">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+			</children>
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+		</AnchorPane>
+	</children>
+</AnchorPane>

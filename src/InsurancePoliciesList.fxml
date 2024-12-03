@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="716.0" prefWidth="1190.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InsurancePoliciesListController">
+	<children>
+		<AnchorPane fx:id="p1" focusTraversable="true" layoutX="10.0" layoutY="10.0" prefHeight="503.0" prefWidth="435.0" style="-fx-background-color: #eeeeee; -fx-background-radius: 50;" AnchorPane.bottomAnchor="10.799999999999955" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.799999999999955" AnchorPane.topAnchor="10.0">
+			<children>
+				<Label fx:id="insurancepolicieQure" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="143.0" layoutY="47.0" prefHeight="54.0" prefWidth="572.0" text="insurance policie's Qure" textAlignment="CENTER" AnchorPane.leftAnchor="143.0" AnchorPane.rightAnchor="177.0">
+					<font>
+						<Font name="Goudy Old Style Bold" size="45.0" />
+					</font>
+					<effect>
+						<ColorAdjust brightness="-1.0" contrast="1.0" hue="1.0" saturation="1.0" />
+					</effect>
+				</Label>
+				<Button fx:id="GonsurancepoliciePage" layoutX="526.0" layoutY="471.0" mnemonicParsing="false" onAction="#GonsurancepoliciePageM" prefHeight="30.0" prefWidth="233.0" style="-fx-background-color: #62AEC0; -fx-background-radius: 50;" text="Go To insurance policie's Page" textAlignment="CENTER" textFill="#280303" AnchorPane.leftAnchor="526.0">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<TableView fx:id="insurancepolicieTable" depthTest="ENABLE" layoutX="14.0" layoutY="116.0" prefHeight="330.0" prefWidth="613.0" style="-fx-border-radius: 50;" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="264.0">
+					<columns>
+						<TableColumn fx:id="PolicyID" prefWidth="83.33331286907196" text="PolicyID " />
+						<TableColumn fx:id="PolicyNumber" prefWidth="116.66668701171875" text="PolicyNumber" />
+						<TableColumn fx:id="Policytype" prefWidth="98.66668701171875" text=" Policy type" />
+						<TableColumn fx:id="CustomPremiumAmount" prefWidth="115.33331298828125" text="PremiumAmount" />
+						<TableColumn fx:id="customerName" prefWidth="156.0" text="customerName " />
+						<TableColumn fx:id="Emailco" minWidth="-1.0" prefWidth="144.800048828125" sortType="DESCENDING" text="Email" />
+					</columns>
+					<cursor>
+						<Cursor fx:constant="OPEN_HAND" />
+					</cursor>
+					<columnResizePolicy>
+						<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+					</columnResizePolicy>
+				</TableView>
+				<Button fx:id="goToBasePageList" layoutX="14.0" layoutY="59.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="7.0" prefWidth="178.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50; -fx-background-radius: 50;" text="Go To Home  Page" textFill="#150101">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Text fx:id="incurancecompanyList" layoutX="48.0" layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text="insurance company">
+					<font>
+						<Font name="Goudy Old Style Bold" size="14.0" />
+					</font>
+				</Text>
+      		<Button fx:id="Search" layoutX="22.0" layoutY="511.0" mnemonicParsing="false" onAction="#searchFirst" prefHeight="30.0" prefWidth="285.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50; -fx-background-radius: 50;" text="Search" textFill="#332f2f">
+      			<font>
+      				<Font name="Goudy Old Style Bold" size="16.0" />
+      			</font>
+      		</Button>
+      		<Label fx:id="FirstLetterOFpolicyType" layoutX="14.0" layoutY="473.0" prefHeight="26.0" prefWidth="160.0" text="First Letter OF  policy Type" />
+      		<TextField fx:id="FirstLetterOFpolicytex" layoutX="181.0" layoutY="473.0" prefHeight="26.0" prefWidth="126.0" promptText="G\V" />
+      		<Button fx:id="SearchByCName" layoutX="20.0" layoutY="615.0" mnemonicParsing="false" onAction="#searchByCName" prefHeight="30.0" prefWidth="286.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50; -fx-background-radius: 50;" text="Search By CUSTOMER Name " textFill="#200101">
+      			<font>
+      				<Font name="Goudy Old Style Bold" size="16.0" />
+      			</font>
+      		</Button>
+      		<Label fx:id="customerNamelabel" layoutX="22.0" layoutY="559.0" prefHeight="26.0" prefWidth="110.0" text="customerName " />
+      		<TextField fx:id="customerNameTex" layoutX="181.0" layoutY="559.0" prefHeight="26.0" prefWidth="126.0" promptText="customerName " />
+      		<Button fx:id="ShowData" layoutX="526.0" layoutY="528.0" mnemonicParsing="false" onAction="#showInsurancePolicies" prefHeight="30.0" prefWidth="234.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50; -fx-background-radius: 50;" text="ShowData" textFill="#100101">
+      			<font>
+      				<Font name="Goudy Old Style Bold" size="16.0" />
+      			</font>
+      		</Button>
+			</children>
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+		</AnchorPane>
+	</children>
+</AnchorPane>

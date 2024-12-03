@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorpane2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="716.0" prefWidth="938.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BranchesController">
+	<children>
+		<AnchorPane fx:id="anchorpan22" focusTraversable="true" layoutX="10.0" layoutY="10.0" prefHeight="503.0" prefWidth="435.0" style="-fx-background-color: #eeeeee; -fx-background-radius: 50;" AnchorPane.bottomAnchor="10.799999999999955" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.799999999999955" AnchorPane.topAnchor="10.0">
+			<children>
+				<Label fx:id="Branches_viewLab" graphicTextGap="10.0" layoutX="203.0" layoutY="23.0" prefHeight="54.0" prefWidth="584.0" text="Insurance Company Branches" textAlignment="CENTER" AnchorPane.leftAnchor="203.0" AnchorPane.rightAnchor="130.0">
+					<font>
+						<Font name="Goudy Old Style Bold" size="45.0" />
+					</font>
+					<effect>
+						<ColorAdjust brightness="-1.0" contrast="1.0" hue="1.0" saturation="1.0" />
+					</effect>
+				</Label>
+				<Button fx:id="goToBranchList" layoutX="14.0" layoutY="488.0" mnemonicParsing="false" onAction="#goToBranchList" prefHeight="42.0" prefWidth="312.0" style="-fx-background-color: #62AEC0; -fx-background-radius: 50;" text="Go To Branch Query Page" textAlignment="CENTER" AnchorPane.leftAnchor="14.0">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Button fx:id="goToBasePage" contentDisplay="RIGHT" layoutX="14.0" layoutY="614.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="42.0" prefWidth="312.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50; -fx-background-radius: 50;" text="Go To Home Page" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="614.0">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<TextField fx:id="siteidTetosearch" layoutX="600.0" layoutY="496.0" prefHeight="26.0" prefWidth="158.0" promptText="BranchID" />
+				<Text fx:id="insurancecompanysitesview" layoutX="47.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="insurance company">
+					<font>
+						<Font name="Goudy Old Style Bold" size="14.0" />
+					</font>
+				</Text>
+				<Button fx:id="update" layoutX="772.0" layoutY="272.0" mnemonicParsing="false" onAction="#updateRecord" prefHeight="42.0" prefWidth="124.0" style="-fx-background-radius: 50; -fx-background-color: #62AEC0;" text="update">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<TableView fx:id="BranchesTableView" layoutX="6.0" layoutY="94.0" onMouseClicked="#handleRowSelection" prefHeight="314.0" prefWidth="583.0" style="-fx-border-radius: 50;" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="302.0">
+					<columns>
+						<TableColumn fx:id="BranchID" prefWidth="97.59997403621674" text="BranchID" />
+						<TableColumn fx:id="BranchName" prefWidth="82.40003204345703" text="BranchName" />
+						<TableColumn fx:id="SiteIDco" prefWidth="68.00003051757812" text="SiteID" />
+					</columns>
+					<cursor>
+						<Cursor fx:constant="OPEN_HAND" />
+					</cursor>
+					<columnResizePolicy>
+						<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+					</columnResizePolicy>
+				</TableView>
+				<Label fx:id="BranchIDTe" layoutX="628.0" layoutY="112.0" text="BranchID" />
+				<TextField fx:id="BranchIDLab" layoutX="722.0" layoutY="108.0" prefHeight="26.0" prefWidth="132.0" promptText="BranchID" />
+				<Label fx:id="BranchNameTe" layoutX="628.0" layoutY="157.0" text="BranchName" />
+				<TextField fx:id="BranchNameLab" layoutX="722.0" layoutY="153.0" prefHeight="26.0" prefWidth="132.0" promptText="BranchName" />
+				<Label fx:id="SiteIDTe" layoutX="628.0" layoutY="201.0" text="SiteID" />
+				<Button fx:id="add" layoutX="629.0" layoutY="272.0" mnemonicParsing="false" onAction="#insertRecord" prefHeight="42.0" prefWidth="124.0" style="-fx-background-radius: 50; -fx-background-color: #62AEC0;" text="Add">
+
+
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Button fx:id="search" layoutX="402.0" layoutY="494.0" mnemonicParsing="false" onAction="#searchRecord" prefHeight="30.0" prefWidth="158.0" style="-fx-background-radius: 50; -fx-background-color: #62AEC0;" text="Search By BranchID">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Button fx:id="delete" layoutX="629.0" layoutY="337.0" mnemonicParsing="false" onAction="#deleteRecord" prefHeight="42.0" prefWidth="124.0" style="-fx-background-radius: 50; -fx-background-color: #62AEC0;" text="Delete ">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Button fx:id="undo" layoutX="772.0" layoutY="337.0" mnemonicParsing="false" onAction="#undoDelete" prefHeight="42.0" prefWidth="124.0" style="-fx-background-radius: 50; -fx-background-color: #62AEC0;" text="UnDoDelete">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Button fx:id="goToSitesPage" contentDisplay="RIGHT" layoutX="14.0" layoutY="549.0" mnemonicParsing="false" onAction="#goToSitesPage" prefHeight="42.0" prefWidth="312.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50; -fx-background-radius: 50;" text="Go To Sites Page">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<ComboBox fx:id="choiceSitesID" layoutX="722.0" layoutY="197.0" prefHeight="26.0" prefWidth="132.0" />
+				<Button fx:id="ShowData" layoutX="774.0" layoutY="494.0" mnemonicParsing="false" onAction="#showBranches" prefHeight="30.0" prefWidth="99.0" style="-fx-background-radius: 50; -fx-background-color: #62AEC0;" text="ShowData">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+			</children>
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+		</AnchorPane>
+	</children>
+</AnchorPane>

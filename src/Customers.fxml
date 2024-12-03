@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pa2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="716.0" prefWidth="912.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomersController">
+	<children>
+		<AnchorPane fx:id="pa1" focusTraversable="true" layoutX="356.0" layoutY="150.0" prefHeight="503.0" prefWidth="435.0" style="-fx-background-color: #eeeeee; -fx-background-radius: 50;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+			<children>
+				<Label fx:id="customerspage" graphicTextGap="10.0" layoutX="260.0" layoutY="14.0" prefHeight="54.0" prefWidth="329.0" text="customer's page" textAlignment="CENTER" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="303.33333333333326">
+					<font>
+						<Font name="Goudy Old Style Bold" size="45.0" />
+					</font>
+					<effect>
+						<ColorAdjust brightness="-1.0" contrast="1.0" hue="1.0" saturation="1.0" />
+					</effect>
+				</Label>
+				<Button fx:id="GoTocustomerQureypage" layoutX="542.0" layoutY="439.0" mnemonicParsing="false" onAction="#goToCustomerQuery" prefHeight="26.0" prefWidth="312.0" style="-fx-background-color: #62AEC0; -fx-background-radius: 50;" text="Go To customer Qurey  page" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="542.0">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Button fx:id="GoToHomePage" contentDisplay="RIGHT" layoutX="542.0" layoutY="394.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="30.0" prefWidth="312.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50; -fx-background-radius: 50;" text="Go To Home Page" textFill="WHITE" AnchorPane.leftAnchor="542.0" AnchorPane.topAnchor="394.0">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<TextField fx:id="SearchByIDtex" layoutX="679.0" layoutY="296.0" prefHeight="26.0" prefWidth="92.0" promptText="customer ID" />
+				<Text fx:id="insurancecompany" layoutX="47.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="insurance company">
+					<font>
+						<Font name="Goudy Old Style Bold" size="14.0" />
+					</font>
+				</Text>
+				<Label fx:id="List_gender" layoutX="762.0" layoutY="591.0" prefHeight="18.0" prefWidth="48.0" />
+				<TableView fx:id="customertabl" layoutX="14.0" layoutY="74.0" onMouseClicked="#handleRowSelection" prefHeight="204.0" prefWidth="867.0" style="-fx-border-radius: 50;" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="11.0">
+					<columns>
+						<TableColumn fx:id="customerIDco" prefWidth="129.33333778381348" text="customer ID" />
+						<TableColumn fx:id="Nameco" prefWidth="85.3333740234375" text="Name" />
+						<TableColumn fx:id="Genderco" prefWidth="112.66670227050781" text="Gender" />
+						<TableColumn fx:id="BirthDateco" prefWidth="164.66665649414062" text="Birth Date" />
+						<TableColumn fx:id="Emailco" prefWidth="160.0" text="Email" />
+						<TableColumn fx:id="BranchIDco" prefWidth="338.66668701171875" text="BranchID" />
+					</columns>
+					<cursor>
+						<Cursor fx:constant="OPEN_HAND" />
+					</cursor>
+				</TableView>
+				<Label fx:id="CustomerIDlab" blendMode="HARD_LIGHT" cache="true" cacheHint="QUALITY" focusTraversable="false" graphicTextGap="1.0" layoutX="12.0" layoutY="294.0" prefHeight="28.0" prefWidth="158.0" text="CustomerID" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="12.0">
+					<font>
+						<Font name="Goudy Old Style Bold" size="23.0" />
+					</font>
+					<opaqueInsets>
+						<Insets bottom="1.0" />
+					</opaqueInsets>
+					<padding>
+						<Insets left="10.0" />
+					</padding>
+					<effect>
+						<Lighting diffuseConstant="0.0" specularConstant="0.0" specularExponent="40.0" surfaceScale="0.0">
+							<bumpInput>
+								<ColorAdjust />
+							</bumpInput>
+							<light>
+								<Light.Distant>
+									<color>
+										<Color />
+									</color>
+								</Light.Distant>
+							</light>
+						</Lighting>
+					</effect>
+					<textFill>
+						<LinearGradient endX="1.0" endY="1.0">
+							<stops>
+								<Stop>
+									<color>
+										<Color red="0.16842105984687805" green="0.024327484890818596" blue="0.024327484890818596" />
+									</color>
+								</Stop>
+								<Stop offset="1.0">
+									<color>
+										<Color />
+									</color>
+								</Stop>
+							</stops>
+						</LinearGradient>
+					</textFill>
+				</Label>
+				<Label fx:id="customernamelab" blendMode="HARD_LIGHT" cache="true" cacheHint="QUALITY" focusTraversable="false" graphicTextGap="1.0" layoutX="14.0" layoutY="334.0" text="customer name" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="14.0">
+					<font>
+						<Font name="Goudy Old Style Bold" size="23.0" />
+					</font>
+					<opaqueInsets>
+						<Insets bottom="1.0" />
+					</opaqueInsets>
+					<padding>
+						<Insets left="10.0" />
+					</padding>
+					<effect>
+						<Lighting diffuseConstant="0.0" specularConstant="0.0" specularExponent="40.0" surfaceScale="0.0">
+							<bumpInput>
+								<ColorAdjust />
+							</bumpInput>
+							<light>
+								<Light.Distant>
+									<color>
+										<Color />
+									</color>
+								</Light.Distant>
+							</light>
+						</Lighting>
+					</effect>
+					<textFill>
+						<LinearGradient endX="1.0" endY="1.0">
+							<stops>
+								<Stop>
+									<color>
+										<Color red="0.16842105984687805" green="0.024327484890818596" blue="0.024327484890818596" />
+									</color>
+								</Stop>
+								<Stop offset="1.0">
+									<color>
+										<Color />
+									</color>
+								</Stop>
+							</stops>
+						</LinearGradient>
+					</textFill>
+				</Label>
+				<Label fx:id="Genderlab" blendMode="HARD_LIGHT" cache="true" cacheHint="QUALITY" focusTraversable="false" graphicTextGap="1.0" layoutX="14.0" layoutY="374.0" text="Gender" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="14.0">
+					<font>
+						<Font name="Goudy Old Style Bold" size="23.0" />
+					</font>
+					<opaqueInsets>
+						<Insets bottom="1.0" />
+					</opaqueInsets>
+					<padding>
+						<Insets left="10.0" />
+					</padding>
+					<effect>
+						<Lighting diffuseConstant="0.0" specularConstant="0.0" specularExponent="40.0" surfaceScale="0.0">
+							<bumpInput>
+								<ColorAdjust />
+							</bumpInput>
+							<light>
+								<Light.Distant>
+									<color>
+										<Color />
+									</color>
+								</Light.Distant>
+							</light>
+						</Lighting>
+					</effect>
+					<textFill>
+						<LinearGradient endX="1.0" endY="1.0">
+							<stops>
+								<Stop>
+									<color>
+										<Color red="0.16842105984687805" green="0.024327484890818596" blue="0.024327484890818596" />
+									</color>
+								</Stop>
+								<Stop offset="1.0">
+									<color>
+										<Color />
+									</color>
+								</Stop>
+							</stops>
+						</LinearGradient>
+					</textFill>
+				</Label>
+				<Label fx:id="BirthDatelab" blendMode="HARD_LIGHT" cache="true" cacheHint="QUALITY" focusTraversable="false" graphicTextGap="1.0" layoutX="14.0" layoutY="409.0" text="Birth Date" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="14.0">
+					<font>
+						<Font name="Goudy Old Style Bold" size="23.0" />
+					</font>
+					<opaqueInsets>
+						<Insets bottom="1.0" />
+					</opaqueInsets>
+					<padding>
+						<Insets left="10.0" />
+					</padding>
+					<effect>
+						<Lighting diffuseConstant="0.0" specularConstant="0.0" specularExponent="40.0" surfaceScale="0.0">
+							<bumpInput>
+								<ColorAdjust />
+							</bumpInput>
+							<light>
+								<Light.Distant>
+									<color>
+										<Color />
+									</color>
+								</Light.Distant>
+							</light>
+						</Lighting>
+					</effect>
+					<textFill>
+						<LinearGradient endX="1.0" endY="1.0">
+							<stops>
+								<Stop>
+									<color>
+										<Color red="0.16842105984687805" green="0.024327484890818596" blue="0.024327484890818596" />
+									</color>
+								</Stop>
+								<Stop offset="1.0">
+									<color>
+										<Color />
+									</color>
+								</Stop>
+							</stops>
+						</LinearGradient>
+					</textFill>
+				</Label>
+				<Label fx:id="Emaillab" blendMode="HARD_LIGHT" cache="true" cacheHint="QUALITY" focusTraversable="false" graphicTextGap="1.0" layoutX="14.0" layoutY="453.0" text="Email" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="14.0">
+					<font>
+						<Font name="Goudy Old Style Bold" size="23.0" />
+					</font>
+					<opaqueInsets>
+						<Insets bottom="1.0" />
+					</opaqueInsets>
+					<padding>
+						<Insets left="10.0" />
+					</padding>
+					<effect>
+						<Lighting diffuseConstant="0.0" specularConstant="0.0" specularExponent="40.0" surfaceScale="0.0">
+							<bumpInput>
+								<ColorAdjust />
+							</bumpInput>
+							<light>
+								<Light.Distant>
+									<color>
+										<Color />
+									</color>
+								</Light.Distant>
+							</light>
+						</Lighting>
+					</effect>
+					<textFill>
+						<LinearGradient endX="1.0" endY="1.0">
+							<stops>
+								<Stop>
+									<color>
+										<Color red="0.16842105984687805" green="0.024327484890818596" blue="0.024327484890818596" />
+									</color>
+								</Stop>
+								<Stop offset="1.0">
+									<color>
+										<Color />
+									</color>
+								</Stop>
+							</stops>
+						</LinearGradient>
+					</textFill>
+				</Label>
+				<TextField fx:id="CustomerIDtex" layoutX="170.0" layoutY="296.0" promptText="رقم الهوية للزبون" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="573.1999999999999" />
+				<TextField fx:id="customernametex" layoutX="173.0" layoutY="335.0" promptText="customer name" AnchorPane.leftAnchor="173.0" AnchorPane.rightAnchor="569.4" />
+				<DatePicker fx:id="Birthday1" layoutX="170.0" layoutY="410.0" prefHeight="25.0" prefWidth="148.0" promptText="Birth Date" />
+				<TextField fx:id="Emailtex" layoutX="170.0" layoutY="454.0" prefHeight="26.0" prefWidth="202.0" promptText="Name.Id@gmail.com" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="573.1999999999999" />
+				<Button fx:id="GoTophonepage" layoutX="542.0" layoutY="477.0" mnemonicParsing="false" onAction="#goToPhone" prefHeight="28.0" prefWidth="312.0" style="-fx-background-color: #62AEC0; -fx-background-radius: 50;" text="Go To  phone page" textAlignment="CENTER" textFill="WHITE">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Button fx:id="undo" layoutX="185.0" layoutY="615.0" mnemonicParsing="false" onAction="#undoDelete" prefHeight="30.0" prefWidth="124.0" style="-fx-background-radius: 50; -fx-background-color: #62AEC0;" text="UnDoDelete">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Button fx:id="Delete" layoutX="17.0" layoutY="615.0" mnemonicParsing="false" onAction="#deleteRecord" prefHeight="18.0" prefWidth="124.0" style="-fx-background-radius: 50; -fx-background-color: #62AEC0;" text="Delete">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Button fx:id="Update" layoutX="185.0" layoutY="551.0" mnemonicParsing="false" onAction="#updateRecord" prefHeight="28.0" prefWidth="124.0" style="-fx-background-radius: 50; -fx-background-color: #62AEC0;" text="Update">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Button fx:id="Add" layoutX="17.0" layoutY="551.0" mnemonicParsing="false" onAction="#insertRecord" prefHeight="25.0" prefWidth="124.0" style="-fx-background-radius: 50; -fx-background-color: #62AEC0;" text="Add">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Button fx:id="GoToBranchpage" layoutX="547.0" layoutY="615.0" mnemonicParsing="false" onAction="#goToBranch" prefHeight="28.0" prefWidth="312.0" style="-fx-background-color: #62AEC0; -fx-background-radius: 50;" text="Go To  Branch page" textAlignment="CENTER" textFill="WHITE">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Label fx:id="BranchIDlab" blendMode="HARD_LIGHT" cache="true" cacheHint="QUALITY" focusTraversable="false" graphicTextGap="1.0" layoutX="17.0" layoutY="492.0" text="BranchID" textOverrun="CENTER_ELLIPSIS">
+					<font>
+						<Font name="Goudy Old Style Bold" size="23.0" />
+					</font>
+					<opaqueInsets>
+						<Insets bottom="1.0" />
+					</opaqueInsets>
+					<padding>
+						<Insets left="10.0" />
+					</padding>
+					<effect>
+						<Lighting diffuseConstant="0.0" specularConstant="0.0" specularExponent="40.0" surfaceScale="0.0">
+							<bumpInput>
+								<ColorAdjust />
+							</bumpInput>
+							<light>
+								<Light.Distant>
+									<color>
+										<Color />
+									</color>
+								</Light.Distant>
+							</light>
+						</Lighting>
+					</effect>
+					<textFill>
+						<LinearGradient endX="1.0" endY="1.0">
+							<stops>
+								<Stop>
+									<color>
+										<Color red="0.16842105984687805" green="0.024327484890818596" blue="0.024327484890818596" />
+									</color>
+								</Stop>
+								<Stop offset="1.0">
+									<color>
+										<Color />
+									</color>
+								</Stop>
+							</stops>
+						</LinearGradient>
+					</textFill>
+				</Label>
+				<ComboBox fx:id="choiceBranchID" layoutX="173.0" layoutY="494.0" prefHeight="26.0" prefWidth="148.0" />
+				<Button fx:id="GoTocustomeraddresspage" layoutX="542.0" layoutY="521.0" mnemonicParsing="false" onAction="#goToAddres" prefHeight="28.0" prefWidth="312.0" style="-fx-background-color: #62AEC0; -fx-background-radius: 50;" text="Go To customer  address page" textAlignment="CENTER" textFill="WHITE">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Button fx:id="GoToinsurance_policies" layoutX="547.0" layoutY="562.0" mnemonicParsing="false" onAction="#goTopolicis" prefHeight="28.0" prefWidth="312.0" style="-fx-background-color: #62AEC0; -fx-background-radius: 50;" text="Go To  insurance_policies " textAlignment="CENTER" textFill="WHITE">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+            <Button fx:id="SearchByID" layoutX="547.0" layoutY="293.0" mnemonicParsing="false" onAction="#searchRecord" prefHeight="25.0" prefWidth="124.0" style="-fx-background-radius: 50; -fx-background-color: #62AEC0;" text="Search By ID">
+               <font>
+                  <Font name="Goudy Old Style Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="ShowData" layoutX="775.0" layoutY="294.0" mnemonicParsing="false" onAction="#showCustomers" prefHeight="30.0" prefWidth="106.0" style="-fx-background-radius: 50; -fx-background-color: #62AEC0;" text="ShowData">
+               <font>
+                  <Font name="Goudy Old Style Bold" size="16.0" />
+               </font>
+            </Button>
+            <TextField fx:id="Gendertex" layoutX="172.0" layoutY="375.0" promptText="Gender" />
+			</children>
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+		</AnchorPane>
+	</children>
+</AnchorPane>

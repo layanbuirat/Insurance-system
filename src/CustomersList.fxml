@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane style="-fx-background-color: #62AEC0; -fx-border-radius: 50;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomersListController">
+	<children>
+		<AnchorPane fx:id="pa1" focusTraversable="true" layoutX="356.0" layoutY="150.0" prefHeight="503.0" prefWidth="435.0" style="-fx-background-color: #eeeeee; -fx-background-radius: 50;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+			<children>
+				<Label fx:id="customerQuery" graphicTextGap="10.0" layoutX="252.0" layoutY="14.0" prefHeight="54.0" prefWidth="387.0" text="customer's Query" textAlignment="CENTER" AnchorPane.leftAnchor="252.0" AnchorPane.rightAnchor="222.0">
+					<font>
+						<Font name="Goudy Old Style Bold" size="45.0" />
+					</font>
+					<effect>
+						<ColorAdjust brightness="-1.0" contrast="1.0" hue="1.0" saturation="1.0" />
+					</effect>
+				</Label>
+				<Button layoutX="827.0" layoutY="647.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="20.0" style="-fx-background-radius: 50; -fx-background-color: #eeeeee;" />
+				<Button fx:id="GoTocustomerpage" layoutX="474.0" layoutY="500.0" mnemonicParsing="false" onAction="#GoTocustomerpage" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50; -fx-background-radius: 50;" text="Go To customer page" textFill="#280101" AnchorPane.leftAnchor="474.0">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Label fx:id="countLabel" layoutX="463.0" layoutY="656.0" prefHeight="18.0" prefWidth="49.0">
+					<font>
+						<Font name="Goudy Old Style" size="18.0" />
+					</font>
+				</Label>
+				<TableView fx:id="customerQueryTable" layoutY="87.0" prefHeight="352.0" prefWidth="839.0" style="-fx-border-radius: 50;">
+					<columns>
+						<TableColumn fx:id="customerID" prefWidth="129.33333778381348" text="customer ID" />
+						<TableColumn fx:id="Name" prefWidth="142.0000457763672" text="Name(first_last)" />
+						<TableColumn fx:id="Email" prefWidth="130.0" text="Email" />
+						<TableColumn fx:id="Branchname" prefWidth="287.99993896484375" text="Branchname" />
+					</columns>
+					<cursor>
+						<Cursor fx:constant="OPEN_HAND" />
+					</cursor>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+				</TableView>
+				<Button fx:id="goToBasePageList" layoutX="28.0" layoutY="37.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="23.0" prefWidth="178.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50; -fx-background-radius: 50;" text="Go To Home Page" textFill="#100101">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Label fx:id="l1" layoutX="14.0" layoutY="555.0" prefHeight="26.0" prefWidth="190.0" text="First Letter OF Customer Name" />
+				<Button fx:id="Search" layoutX="15.0" layoutY="613.0" mnemonicParsing="false" onAction="#searchFirst" prefHeight="30.0" prefWidth="307.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50; -fx-background-radius: 50;" text="Search" textFill="#180101">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<TextField fx:id="FirstLetterOFCustomertex" layoutX="206.0" layoutY="555.0" prefHeight="26.0" prefWidth="126.0" promptText="FirstLetterOFCustomertex" />
+				<Label fx:id="l2" layoutX="14.0" layoutY="455.0" prefHeight="26.0" prefWidth="110.0" text="BranchName" />
+				<TextField fx:id="BranchNameTex" layoutX="117.0" layoutY="455.0" prefHeight="26.0" prefWidth="126.0" promptText="BranchName" />
+				<Button fx:id="SearchByBranchName" layoutX="10.0" layoutY="500.0" mnemonicParsing="false" onAction="#searchBybranchName" prefHeight="30.0" prefWidth="307.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50; -fx-background-radius: 50;" text="Search By BranchName " textFill="#2b0303">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Button fx:id="ShowData" layoutX="474.0" layoutY="566.0" mnemonicParsing="false" onAction="#showCustomers" prefHeight="30.0" prefWidth="178.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50; -fx-background-radius: 50;" text="ShowData" textFill="#080101">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+			</children>
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+		</AnchorPane>
+		<Text fx:id="incurancecompany" layoutX="42.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="incurance company">
+			<font>
+				<Font name="Goudy Old Style Bold" size="14.0" />
+			</font>
+		</Text>
+	</children>
+</AnchorPane>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="Querypage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="934.0" style="-fx-background-color: #DE5D83;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="QueryController">
+    <children>
+        <AnchorPane fx:id="Homepage" focusTraversable="true" layoutX="26.0" layoutY="30.0" prefHeight="650.0" prefWidth="878.0" style="-fx-background-color: WHITE; -fx-background-radius: 50;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+            <children>
+                <Text fx:id="insurancecompanyquerylab" fill="#131313" layoutX="224.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-stroke-width: 3;" text="insurance company query" wrappingWidth="414.3564147949219">
+                    <font>
+                        <Font name="Century" size="30.0" />
+                    </font>
+                </Text>
+                <Button fx:id="goInstallmentQuery" alignment="TOP_CENTER" contentDisplay="RIGHT" ellipsisString="" graphicTextGap="0.0" layoutX="401.0" layoutY="169.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#InstallmentQuery" prefHeight="0.0" prefWidth="295.0" style="-fx-background-color: BLUE; -fx-text-fill: WHITE; -fx-text-alignment: LEFT; -fx-background-radius: 50;" text="Installment Query" textAlignment="JUSTIFY" textFill="#fafafa" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true" AnchorPane.leftAnchor="401.0" AnchorPane.rightAnchor="188.33333333333326">
+                    <font>
+                        <Font name="Goudy Old Style" size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="gocustomerQuery" cache="true" contentDisplay="RIGHT" graphicTextGap="0.0" layoutX="48.0" layoutY="171.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#customerQuery" prefHeight="36.0" prefWidth="299.0" style="-fx-background-color: BLUE; -fx-text-fill: WHITE; -fx-text-alignment: LEFT; -fx-background-radius: 50;" text="customer Query" textAlignment="JUSTIFY" textFill="#fafafa" textOverrun="CENTER_WORD_ELLIPSIS" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="538.0">
+                    <font>
+                        <Font name="Goudy Old Style" size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="goAccidentQuery" contentDisplay="RIGHT" graphicTextGap="0.0" layoutX="411.0" layoutY="217.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AccidentQuery" prefHeight="28.0" prefWidth="292.0" style="-fx-background-color: BLUE; -fx-text-fill: WHITE; -fx-text-alignment: LEFT; -fx-background-radius: 50;" text="Accident Query" textAlignment="JUSTIFY" textFill="#fafafa" textOverrun="CENTER_WORD_ELLIPSIS" AnchorPane.leftAnchor="411.0" AnchorPane.rightAnchor="180.33333333333337">
+                    <font>
+                        <Font name="Goudy Old Style" size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="gositesQuery" contentDisplay="RIGHT" graphicTextGap="0.0" layoutX="51.0" layoutY="327.0" lineSpacing="100.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#sitesQuery" prefHeight="36.0" prefWidth="292.0" style="-fx-background-color: BLUE; -fx-text-fill: WHITE; -fx-text-alignment: LEFT; -fx-background-radius: 50;" text="sites Query" textAlignment="JUSTIFY" textFill="#fafafa" textOverrun="CENTER_WORD_ELLIPSIS" AnchorPane.leftAnchor="51.0">
+                    <font>
+                        <Font name="Goudy Old Style" size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="goclaimQuery" contentDisplay="RIGHT" graphicTextGap="0.0" layoutX="411.0" layoutY="381.0" lineSpacing="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#claimQuery" prefHeight="23.0" prefWidth="300.0" style="-fx-background-color: BLUE; -fx-text-fill: WHITE; -fx-text-alignment: LEFT; -fx-background-radius: 50;" text="claim Query" textAlignment="JUSTIFY" textFill="#fafafa" textOverrun="CENTER_WORD_ELLIPSIS" AnchorPane.leftAnchor="411.0">
+                    <font>
+                        <Font name="Goudy Old Style" size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="endbutton" alignment="TOP_CENTER" contentDisplay="RIGHT" ellipsisString="" graphicTextGap="0.0" layoutX="602.0" layoutY="583.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#TOTHEEND" prefHeight="40.0" prefWidth="186.0" style="-fx-background-color: #eeeeee; -fx-text-fill: blue; -fx-text-alignment: LEFT; -fx-background-radius: 50;" text="TO THE END" textAlignment="JUSTIFY" textFill="#fafafa" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+                    <font>
+                        <Font name="Goudy Old Style Bold" size="22.0" />
+                    </font>
+                    <effect>
+                        <Lighting diffuseConstant="1.39" specularConstant="0.0" specularExponent="40.0" surfaceScale="0.0">
+                            <bumpInput>
+                                <Shadow />
+                            </bumpInput>
+                            <light>
+                                <Light.Distant />
+                            </light>
+                        </Lighting>
+                    </effect>
+                </Button>
+                <Button fx:id="goAccident_driverQuery" contentDisplay="RIGHT" graphicTextGap="0.0" layoutX="411.0" layoutY="325.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Accident_driverQuery" prefHeight="28.0" prefWidth="292.0" style="-fx-background-color: BLUE; -fx-text-fill: WHITE; -fx-text-alignment: LEFT; -fx-background-radius: 50;" text="Accident_driver Query" textAlignment="JUSTIFY" textFill="#fafafa" textOverrun="CENTER_WORD_ELLIPSIS">
+                    <font>
+                        <Font name="Goudy Old Style" size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="goAccident_vehicleQuery" contentDisplay="RIGHT" graphicTextGap="0.0" layoutX="411.0" layoutY="269.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Accident_vehicleQuery" prefHeight="28.0" prefWidth="292.0" style="-fx-background-color: BLUE; -fx-text-fill: WHITE; -fx-text-alignment: LEFT; -fx-background-radius: 50;" text="Accident_vehicle Query" textAlignment="JUSTIFY" textFill="#fafafa" textOverrun="CENTER_WORD_ELLIPSIS">
+                    <font>
+                        <Font name="Goudy Old Style" size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="gocustomer_addressQuery" cache="true" contentDisplay="RIGHT" graphicTextGap="0.0" layoutX="47.0" layoutY="219.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#customer_addressQuery" prefHeight="36.0" prefWidth="299.0" style="-fx-background-color: BLUE; -fx-text-fill: WHITE; -fx-text-alignment: LEFT; -fx-background-radius: 50;" text="customer_address Query" textAlignment="JUSTIFY" textFill="#fafafa" textOverrun="CENTER_WORD_ELLIPSIS">
+                    <font>
+                        <Font name="Goudy Old Style" size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="goInsurancepolicyQuery" cache="true" contentDisplay="RIGHT" graphicTextGap="0.0" layoutX="54.0" layoutY="269.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#InsurancepolicyQuery" prefHeight="36.0" prefWidth="299.0" style="-fx-background-color: BLUE; -fx-text-fill: WHITE; -fx-text-alignment: LEFT; -fx-background-radius: 50;" text="Insurance policy Query" textAlignment="JUSTIFY" textFill="#fafafa" textOverrun="CENTER_WORD_ELLIPSIS">
+                    <font>
+                        <Font name="Goudy Old Style" size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="goBranchQuery" contentDisplay="RIGHT" graphicTextGap="0.0" layoutX="58.0" layoutY="383.0" lineSpacing="100.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#BranchQuery" prefHeight="36.0" prefWidth="292.0" style="-fx-background-color: BLUE; -fx-text-fill: WHITE; -fx-text-alignment: LEFT; -fx-background-radius: 50;" text="Branch Query" textAlignment="JUSTIFY" textFill="#fafafa" textOverrun="CENTER_WORD_ELLIPSIS">
+                    <font>
+                        <Font name="Goudy Old Style" size="22.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
