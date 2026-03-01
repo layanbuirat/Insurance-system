@@ -145,56 +145,6 @@ bash
 javac --module-path /path/to/javafx-sdk-17/lib --add-modules javafx.controls,javafx.fxml -d bin src/**/*.java
 Run the application:
 
-bash
-java --module-path /path/to/javafx-sdk-17/lib --add-modules javafx.controls,javafx.fxml -cp bin Main
-📁 Project Structure
-text
-Insurance-system/
-│
-├── .settings/                # IDE configuration files
-├── bin/                       # Compiled bytecode files (.class)
-├── ERD/                        # ERD diagram images
-├── src/                        # Source code
-│   ├── Accident.java           # Accident entity model
-│   ├── AccidentController.java # Accident screen controller
-│   ├── Accident.fxml           # Accident UI layout
-│   ├── AccidentList.fxml       # Accident list UI
-│   ├── AccidentListController.java
-│   ├── Accident_Drivers.java   # Junction entity for Accident-Driver
-│   ├── Accident_Drivers.fxml
-│   ├── Accident_DriversController.java
-│   ├── Accident_Vehicle.java   # Junction entity for Accident-Vehicle
-│   ├── Accident_Vehicle.fxml
-│   ├── Accident_VehicleController.java
-│   ├── Address.java
-│   ├── Address.fxml
-│   ├── AddressController.java
-│   ├── AddressList.fxml
-│   ├── AddressListController.java
-│   ├── Branch.java
-│   ├── BranchesController.java
-│   ├── BranchListController.java
-│   ├── BranchList.fxml
-│   ├── Phone.java
-│   ├── PhoneController.java
-│   ├── PhoneList.fxml
-│   ├── PhoneListController.java
-│   ├── QueryController.java
-│   ├── Sites.java
-│   ├── Sites.fxml
-│   ├── SitesController.java
-│   ├── SiteList.fxml
-│   ├── SiteListController.java
-│   ├── Vehicles.java
-│   ├── Vehicles.fxml
-│   ├── VehiclesList.fxml
-│   ├── VehiclesListController.java
-│   └── query.fxml
-│
-├── .classpath                 # Eclipse classpath
-├── .project                   # Eclipse project file
-├── Plan_of_insurance_System_company.pdf  # Project plan/documentation
-└── README.md                  # This file
 👥 Contributors
 This project was developed by:
 
@@ -203,3 +153,4 @@ Marah Mohammad	1211143	Developer
 Leyan Burait	1211439	Maneger & Developer
 Ahd Shereth	1211467	Developer
 Tala Abadi	1210567	Developer
+
